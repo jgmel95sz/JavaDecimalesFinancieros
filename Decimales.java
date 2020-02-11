@@ -20,8 +20,8 @@ public class Decimales {
      */
     public static void main(String[] args) {
         // Numeros Financieros
-            BigDecimal a = new BigDecimal(""+1770.00);
-            BigDecimal b = new BigDecimal(""+3.3169671);
+            BigDecimal a = new BigDecimal(""+345.50);
+            BigDecimal b = new BigDecimal(""+3.305);
             System.out.println("a ="+a);
             System.out.println("b ="+b);
            //HALF_DOWN Redondea hacia arriba solo si el decimal es > a 0.5
@@ -30,9 +30,11 @@ public class Decimales {
             
             BigDecimal resultadoSuma = a.add(b);  
             resultadoSuma = resultadoSuma.setScale(2, RoundingMode.HALF_DOWN);     
-            System.out.print("Resultado Suma: "+resultadoSuma);
+            System.out.print("Resultado Suma: "+resultadoSuma + "\n");
             
-            
+            BigDecimal resultadoMultiplicacion = a.multiply(b);  
+            resultadoMultiplicacion = resultadoMultiplicacion.setScale(2, RoundingMode.HALF_DOWN);     
+            System.out.print("Resultado Multiplicacion: "+resultadoMultiplicacion);
     }
     
 }
